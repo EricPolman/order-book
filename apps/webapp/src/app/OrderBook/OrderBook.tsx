@@ -44,8 +44,8 @@ export function OrderBook() {
 
   return <div style={{width: 200}}>
     <OrderBookHeader />
-    <OrderBookTable entries={data.bids} side="bids" maximumVisible={25} shouldRenderInReverseOrder />
+    <OrderBookTable onRowClick={(row) => { alert(row.amount) }} entries={data.bids} side="bids" maximumVisible={25} shouldRenderInReverseOrder />
     <OrderBookCenter spread={spread} midMarketPrice={midMarketPrice} />
-    <OrderBookTable entries={data.asks} side="asks" maximumVisible={25} />
+    <OrderBookTable onRowClick={(row) => { alert(row.amount) }} entries={data.asks} side="asks" maximumVisible={25} />
     </div>;
 }

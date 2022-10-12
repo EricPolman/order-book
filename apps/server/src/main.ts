@@ -15,9 +15,9 @@ const orderBookService = new OrderBookService({
   priceDecimals: 2,
   broadcastFrequencyInMs: 100,
   updateFrequencyInMs: 2,
-  initialAsksCount: 30,
-  initialBidsCount: 30,
-  initialMidMarketPrice: 20000,
+  initialAsksCount: 10000,
+  initialBidsCount: 10000,
+  initialMidMarketPrice: 50000,
   marketPair: 'BTC-EUR',
 });
 orderBookService.init();

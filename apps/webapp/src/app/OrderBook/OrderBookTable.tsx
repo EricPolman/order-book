@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const StyledTable = styled.table<{$side: "asks" | "bids"}>`
   position: relative;
 
+  border: 1px solid #777;
   border-collapse: separate;
   border-spacing: 0;
   tr {
@@ -52,24 +53,25 @@ interface Props {
   maximumVisible: number;
   shouldRenderInReverseOrder?: boolean;
   side: "asks" | "bids";
+  onRowClick(row: OrderBookEntry): void;
 }
 
 export function OrderBookTable({
   entries,
   maximumVisible,
   shouldRenderInReverseOrder,
-  side
+  side,
+  onRowClick
 }: Props) {
-  const entriesToRender = entries.slice(0, maximumVisible);
+  const entriesToRender = (shouldRenderInReverseOrder ? [...entries].reverse() : entries).slice(0, maximumVisible);
   if (shouldRenderInReverseOrder) {
     entriesToRender.reverse();
   }
-
   return (
     <StyledTable $side={side}>
       <tbody>
         {entriesToRender.map(e => (
-          <tr key={e.price}>
+          <tr key={e.price} onClick={() => onRowClick(e)}>
             <td>
               {/* <AmountBar $percentage={+e.amount} /> */}
               <span>{e.amount}</span>
