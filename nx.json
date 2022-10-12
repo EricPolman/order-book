@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "team-rockstars-it",
+  "npmScope": "polman-order-book",
   "affected": {
     "defaultBase": "master"
   },
@@ -54,5 +54,5 @@
       }
     }
   },
-  "defaultProject": "order-book"
+  "defaultProject": "webapp"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "team-rockstars-it",
+  "name": "polman-order-book",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -9,24 +9,31 @@
   },
   "private": true,
   "dependencies": {
+    "@tanstack/react-query": "^4.10.3",
+    "axios": "^1.1.2",
     "core-js": "^3.6.5",
+    "express": "^4.18.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
     "regenerator-runtime": "0.13.7",
+    "stream": "^0.0.2",
     "styled-components": "5.3.5",
-    "tslib": "^2.3.0"
+    "ws": "^8.9.0"
   },
   "devDependencies": {
     "@nrwl/cli": "14.8.4",
     "@nrwl/cypress": "14.8.4",
     "@nrwl/eslint-plugin-nx": "14.8.4",
+    "@nrwl/express": "14.8.4",
     "@nrwl/jest": "14.8.4",
     "@nrwl/linter": "14.8.4",
+    "@nrwl/node": "14.8.4",
     "@nrwl/react": "14.8.4",
     "@nrwl/web": "14.8.4",
     "@nrwl/workspace": "14.8.4",
     "@testing-library/react": "13.4.0",
+    "@types/express": "4.17.13",
     "@types/jest": "28.1.1",
     "@types/node": "16.11.7",
     "@types/react": "18.0.20",

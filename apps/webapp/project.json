@@ -1,7 +1,7 @@
 {
-  "name": "order-book",
+  "name": "webapp",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/order-book/src",
+  "sourceRoot": "apps/webapp/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,16 +10,13 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/order-book",
-        "index": "apps/order-book/src/index.html",
+        "outputPath": "dist/apps/webapp",
+        "index": "apps/webapp/src/index.html",
         "baseHref": "/",
-        "main": "apps/order-book/src/main.tsx",
-        "polyfills": "apps/order-book/src/polyfills.ts",
-        "tsConfig": "apps/order-book/tsconfig.app.json",
-        "assets": [
-          "apps/order-book/src/favicon.ico",
-          "apps/order-book/src/assets"
-        ],
+        "main": "apps/webapp/src/main.tsx",
+        "polyfills": "apps/webapp/src/polyfills.ts",
+        "tsConfig": "apps/webapp/tsconfig.app.json",
+        "assets": ["apps/webapp/src/favicon.ico", "apps/webapp/src/assets"],
         "styles": [],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
@@ -34,8 +31,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/order-book/src/environments/environment.ts",
-              "with": "apps/order-book/src/environments/environment.prod.ts"
+              "replace": "apps/webapp/src/environments/environment.ts",
+              "with": "apps/webapp/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -51,15 +48,15 @@
       "executor": "@nrwl/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "order-book:build",
+        "buildTarget": "webapp:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "order-book:build:development"
+          "buildTarget": "webapp:build:development"
         },
         "production": {
-          "buildTarget": "order-book:build:production",
+          "buildTarget": "webapp:build:production",
           "hmr": false
         }
       }
@@ -68,14 +65,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/order-book/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/webapp/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/order-book"],
+      "outputs": ["coverage/apps/webapp"],
       "options": {
-        "jestConfig": "apps/order-book/jest.config.ts",
+        "jestConfig": "apps/webapp/jest.config.ts",
         "passWithNoTests": true
       }
     }
