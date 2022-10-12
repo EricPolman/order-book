@@ -19,6 +19,7 @@
     "regenerator-runtime": "0.13.7",
     "stream": "^0.0.2",
     "styled-components": "5.3.5",
+    "uuid": "^9.0.0",
     "ws": "^8.9.0"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "@types/react-dom": "18.0.6",
     "@types/react-is": "17.0.3",
     "@types/styled-components": "5.1.26",
+    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "babel-jest": "28.1.1",

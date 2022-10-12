@@ -14,7 +14,7 @@ const orderBookService = new OrderBookService({
   amountDecimals: 4,
   priceDecimals: 2,
   broadcastFrequencyInMs: 100,
-  updateFrequencyInMs: 5,
+  updateFrequencyInMs: 2,
   initialAsksCount: 30,
   initialBidsCount: 30,
   initialMidMarketPrice: 20000,

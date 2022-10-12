@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { OrderBook } from './order-book';
+import { OrderBook } from './OrderBook/OrderBook';
 
 const queryClient = new QueryClient();
 
